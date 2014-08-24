@@ -15,7 +15,7 @@ object HelloWorld {
    * common in Java, HelloWorld.sayHello will have the same effect.
    *
    * Alternative notations:
-   * val sayHello = "FixMe"                          -> Type annotation is optional, will be automatically inferred
+   * val sayHello = "FixMe"                           -> Type annotation is optional, will be automatically inferred
    * val sayHello: String = {"FixMe"}                 -> Brackets are also optional
    *
    * Declaring a value with val will create an immutable field. An immutable field in Scala is the same as a final field
@@ -35,7 +35,7 @@ object HelloWorld {
    * the method (:String) is again at the end of the method signature, just before the method body.
    *
    * Alternative notations:
-   * def echo(text: String): String = {"FixMe"}        -> Brackets around the method body are optional
+   * def echo(text: String): String = {"FixMe"}       -> Brackets around the method body are optional
    * def echo(text) = "FixMe"                         -> Type annotation is optional
    *
    * Example of a void method:
@@ -50,6 +50,8 @@ object HelloWorld {
 
 
 /*================================= Objects =====================================*/
+/*--------------------------------- OPTIONAL ------------------------------------*/
+
 /**
  * The goal of this exercise is to get familiar with the idea behind Companion Objects
  *
@@ -88,6 +90,7 @@ abstract class HelloWorldClassAndObject {
 }
 
 /*================================= Traits =====================================*/
+/*--------------------------------- OPTIONAL ------------------------------------*/
 
 object HelloWorldWithTraits extends HelloTrait with WorldTrait {
 

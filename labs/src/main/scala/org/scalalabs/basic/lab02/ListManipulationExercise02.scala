@@ -38,30 +38,30 @@ object ListManipulationExercise02 {
    * may be able to achieve the same functionality as implemented below
    * in a one-liner.
    */
-  def separateTheMenFromTheBoys(persons: List[Person]): List[List[String]] = {
-    var boys: ListBuffer[Person] = new ListBuffer[Person]()
-    var men: ListBuffer[Person] = new ListBuffer[Person]()
-    var validBoyNames: ListBuffer[String] = new ListBuffer[String]()
-    var validMenNames: ListBuffer[String] = new ListBuffer[String]()
+  def separateTheYoungFromTheOld(persons: List[Person]): List[List[String]] = {
+    var youngins: ListBuffer[Person] = new ListBuffer[Person]()
+    var elders: ListBuffer[Person] = new ListBuffer[Person]()
+    var validYoungNames: ListBuffer[String] = new ListBuffer[String]()
+    var validOldNames: ListBuffer[String] = new ListBuffer[String]()
 
     for (person <- persons) {
         if (person.age < 18) {
-          boys += person
+          youngins += person
         } else {
-          men += person
+          elders += person
         }
     }
 
-    var sortedBoys = boys.toList.sortBy(_.age)
-    var sortedMen = men.toList.sortBy(_.age)
+    var sortedYoung = youngins.toList.sortBy(_.age)
+    var sortedOld = elders.toList.sortBy(_.age)
 
-    for (boy <- sortedBoys) {
-      validBoyNames += boy.firstName
+    for (young <- sortedYoung) {
+      validYoungNames += young.firstName
     }
-    for (man <- sortedMen) {
-      validMenNames += man.firstName
+    for (old <- sortedOld) {
+      validOldNames += old.firstName
     }
-    List(validBoyNames.toList, validMenNames.toList)
+    List(validYoungNames.toList, validOldNames.toList)
   }
 
 }

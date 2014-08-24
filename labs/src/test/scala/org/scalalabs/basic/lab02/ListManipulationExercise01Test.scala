@@ -53,18 +53,18 @@ class ListManipulationExercise01Test extends Specification {
       List("One", "Two", "Three", "Four", "Five") === concatLists(listOfStrings, List("Four", "Five"))
     }
 
+     "sort list of strings" in {
+      val l = List("Sjors", "Arjan", "Age", "Lieke", "J-Fall", "ScalaLabs")
+      List("Age", "Arjan", "J-Fall", "Lieke", "ScalaLabs", "Sjors") === sortList(l)
+    }
+
     "contains One Two And Three" in {
       elementExists(listOfStrings, "One")
       elementExists(listOfStrings, "Two")
       elementExists(listOfStrings, "Three")
     }
 
-    "sort list of strings" in {
-      val l = List("Sjors", "Arjan", "Age", "Lieke", "J-Fall", "ScalaLabs")
-      List("Age", "Arjan", "J-Fall", "Lieke", "ScalaLabs", "Sjors") === sortList(l)
-    }
-
-    "get list contains two odd elements" in {
+   "get list contains two odd elements" in {
       List(1, 3, 5) === oddElements(List(1, 2, 3, 4, 5))
     }
 

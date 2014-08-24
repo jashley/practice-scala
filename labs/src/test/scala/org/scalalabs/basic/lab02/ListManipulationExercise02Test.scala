@@ -43,16 +43,16 @@ class ListManipulationExercise02Test extends Specification {
      //This unit test succeeds! But, the code that is called is written 'Java style',
     //it contains a lot of boilerplate code. Your job is to rewrite the code, get rid of the
     //loops and variables, and use only functions.
-    val anton1 = Person(15, "Anton1", "Jansen")
-    val anton2 = Person(17, "Anton2", "Janssen")
-    val anton3 = Person(18, "Anton3", "Jansssen")
-    val peter1 = Person(17, "Peter1", "Peterson")
-    val peter2 = Person(19, "Peter2", "Petersson")
-    val jason = Person(21, "Jason", "Jasonsson")
+    val avery1 = Person(15, "Avery1", "Jansen")
+    val avery2 = Person(17, "Avery2", "Janssen")
+    val avery3 = Person(18, "Avery3", "Jansssen")
+    val jordan1 = Person(17, "Jordan1", "Peterson")
+    val jordan2 = Person(19, "Jordan2", "Petersson")
+    val nehal = Person(21, "Nehal", "Tambe")
     
-    val result = separateTheMenFromTheBoys(List(jason, anton1, anton2, anton3, peter1, peter2))
+    val result = separateTheYoungFromTheOld(List(nehal, avery1, avery2, avery3, jordan1, jordan2))
     
-    List(List("Anton1", "Anton2", "Peter1"), List("Anton3", "Peter2", "Jason")) === result
+    List(List("Avery1", "Avery2", "Jordan1"), List("Avery3", "Jordan2", "Nehal")) === result
   }
  }
 }

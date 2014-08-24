@@ -13,3 +13,6 @@ target
 *.iml
 *.ipr
 .idea
+labs/.settings
+solutions/.settings
+.cache

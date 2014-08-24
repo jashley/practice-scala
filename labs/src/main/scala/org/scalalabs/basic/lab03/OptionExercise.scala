@@ -33,7 +33,7 @@ object OptionExercise01 {
 object OptionExercise02 {
   /**
    * Calculate the total amount of people in all rooms
-   * Hint: make use of a for expression and scala.util.control.Exception.allCatch opt (...)
+   * Hint: define a helper function that computes a room's occupancy
    * to convert a possible numeric String (e.g. Some("12")) to an integer
    */
   def totalPeopleInRooms(rooms: Map[Int, Option[String]]): Int = {

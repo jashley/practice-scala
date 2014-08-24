@@ -52,7 +52,7 @@ class DummyService  {
   
   /**the logger must be removed. 
    * Move it to a Loggable trait that can be mix-in in any class that needs logging.
-   * Finally, mix-in the Loggable trait in this class in order to log the statments
+   * Finally, mix-in the Loggable trait in this class in order to log the statements
    * in the sendSomething method*/
   val logger = SimpleLogger(getClass().getName())
   

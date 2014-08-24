@@ -13,10 +13,6 @@ import sys._
  *
  * For this exercise exclusively use pattern matching constructs in order to make the
  * corresponding unit test work.
- *
- * Reference material to solve these exercises can be found here:
- * Pattern matching in general: http://programming-scala.labs.oreilly.com/ch03.html#PatternMatching
- * Pattern matching in combination with partial functions: http://programming-scala.labs.oreilly.com/ch08.html#PartialFunctions
  */
 
 object PatternMatchingExercise {
@@ -26,35 +22,41 @@ object PatternMatchingExercise {
    * For expected solution see unittest @PatternMatchingExerciseTest
    *************************************************************************/
 
-  def describeLanguage(s: String) = {
+  def describeLanguage(s: String): String = {
     error("fix me")
   }
 
-  def matchOnInputType(in: Any) = {
+  /**
+   * Here's how matches should work. If `in` is:
+   * 
+   *    - a `String`, the function result is "A string with length n"
+   *       where `n` is the length of `in`
+   *       
+   *    - a positive `Integer`, the function result is "A positive integer"
+   *    
+   *    - an instance of class `Person`, the function result is "A person with name: n"
+   *       where `n` is the name of the person
+   *       
+   *    - a sequence with more than 10 elements, the function result is "Seq with more than 10 elements"
+   *    
+   *    - a sequence with at least three elements, the function result is "first: v1, second: v2, rest: tail"
+   *        where v1, v2, and tail are the corresponding values from the sequence
+   *        
+   *    - null, the function result is "A null value"
+   *        
+   *    - anything else, the function result is "Some Scala class"
+   */
+  def matchOnInputType(in: Any): String = {
     error("fix me")
   }
 
+  /**
+   * If the person is older than 30, return an `Option` with the person's name;
+   *    otherwise return `None`
+   */
   def older(p: Person): Option[String] = {
     error("fix me")
   }
-
-  /*************************************************************************
-   * Pattern matching with partial functions
-   * For expected solution see @PatternMatchingExerciseTest
-   *************************************************************************/
-
-  val pf1: PartialFunction[String, String] = {
-    case _ => error("fix me")
-  }
-
-  val pf2: PartialFunction[String, String] = {
-    case _ => error("fix me")
-  }
-
-  val pf3:PartialFunction[String, String] = {
-    case _ => error("fix me")
-  }
-
 }
 
 case class Person(name: String, age: Int)

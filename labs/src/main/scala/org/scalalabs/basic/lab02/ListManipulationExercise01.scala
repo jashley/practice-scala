@@ -20,9 +20,7 @@ object ListManipulationExercise01 {
   }
 
   /**
-   * Get the sum of all the elements in the list, e.g. sumOfList(List(1,2,3)) = 6. To achieve this, you can use a higher order function.
-   * The function that is of interest here can be found here:
-   * https://www.scala-lang.org/docu/files/api/scala/List.html#foldLeft(B)
+   * Get the sum of all the elements in the list, e.g. sumOfList(List(1,2,3)) = 6.
    */
   def sumOfList(l: List[Int]): Int = {
     error("fix me")
