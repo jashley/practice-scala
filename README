@@ -5,17 +5,6 @@ This project is based on Scala-labs
 [sl-repo]: https://github.com/hmc-cs111-fall2014/scala-labs
 [Scala Collections]: http://docs.scala-lang.org/overviews/collections/introduction.html
 
-## Setup
-1. [Fork](https://education.github.com/guide/forks) the [repo][sl-repo].
-1. On your fork, add the [original](sl-repo) as a remote called `upstream`:
-```
-git remote add upstream https://github.com/hmc-cs111-fall2014/practice-scala
-```
-
-<http://www.scholarslab.org/research-and-development/forking-fetching-pushing-pulling/>
-
-1. _Optional_: for ScalaIDE, run `sbt eclipse`
-
 ## Basic labs
 
 ### Lab 1
