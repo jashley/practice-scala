@@ -40,11 +40,7 @@ Here's what to do:
   - [ ] Submit your work.
   - [ ] Review and comment on other teams' code. 
 
-
-TODO: submission date; critique date
-
 ## Lab instructions, hints, and tips
-
 
 ### Basic Lab 1
 
