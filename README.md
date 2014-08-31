@@ -11,12 +11,10 @@ we'll be using this semester. When you're done, you should feel good about:
 - the GitHub workflow for our assignments
 
 
-<div color="grey">
 *1. Normally, it would be good practice to fork the 
 [Scala Labs repository](https://github.com/scala-labs/scala-labs/), and modify
 the fork. But I didn't want our pull requests to accidentally go to Scala Labs,
 so I copied the lab instead.*
-</div>
 
 ## Instructions
 There are four steps to the assignment:
