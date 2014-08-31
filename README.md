@@ -105,12 +105,6 @@ Hints and tips:
   - Many of the solutions to these tasks have the same structure.
   - Find a built-in method that does most of the work.
 
-- `OptionExercise`
-
-### Lab 4
-
-Optional: You're on your own!
-
 ## Tips and Tricks
 You can use this document as a
 checklist, if you'd like. Here's how: 
