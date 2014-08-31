@@ -1,4 +1,54 @@
-This project is based on Scala-labs
+* auto-gen TOC:
+{:toc}
+
+# Assignment 1: Practice Scala
+The assignment is a modified version of the
+[Scala Labs](http://scala-labs.github.io/) project.[^forking] The goal of this
+assignment is to help you become familiar with Scala and the development tools
+we'll be using this semester. When you're done, you should feel good about:
+
+- the basics of scala: variables, TODO
+- the GitHub workflow for our assignments
+
+
+[^forking]: Normally, it would be good practice to fork the 
+[Scala Labs repository](https://github.com/scala-labs/scala-labs/), and modify
+the fork. But I didn't want our pull requests to accidentally go to Scala Labs,
+so I copied the lab instead.
+
+## Instructions
+There are four steps to the assignment:
+
+1. Fork the official repository to get the assignment.
+2. Work on the assignment.
+3. Submit your work via a pull request.
+4. Comment on other people's code. 
+
+**Read the instructions below very carefully.** You can use this document as a
+checklist, if you'd like. Here's how: 
+
+1. After you've forked the repository, open your version of `README.md` in a
+text editor.
+2. When you see a list that looks like this:
+
+```
+- [ ] A task
+- [ ] Another task
+```
+
+you can check off the things you've done:
+
+```
+- [X] A task
+- [ ] Another task
+```
+
+The list will then show up on the front page of your GitHub repository like this
+:
+
+- [X] A task
+- [ ] Another task
+
 
 # Doing the assignment
 
