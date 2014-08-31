@@ -3,7 +3,7 @@
 
 # Assignment 1: Practice Scala
 The assignment is a modified version of the
-[Scala Labs](http://scala-labs.github.io/) project.[^forking] The goal of this
+[Scala Labs](http://scala-labs.github.io/) project.<sup>1</sup> The goal of this
 assignment is to help you become familiar with Scala and the development tools
 we'll be using this semester. When you're done, you should feel good about:
 
@@ -11,10 +11,12 @@ we'll be using this semester. When you're done, you should feel good about:
 - the GitHub workflow for our assignments
 
 
-[^forking]: Normally, it would be good practice to fork the 
+<div color="grey">
+*1. Normally, it would be good practice to fork the 
 [Scala Labs repository](https://github.com/scala-labs/scala-labs/), and modify
 the fork. But I didn't want our pull requests to accidentally go to Scala Labs,
-so I copied the lab instead.
+so I copied the lab instead.*
+</div>
 
 ## Instructions
 There are four steps to the assignment:
@@ -24,7 +26,9 @@ There are four steps to the assignment:
 3. Submit your work via a pull request.
 4. Comment on other people's code. 
 
-**Read the instructions below very carefully.** You can use this document as a
+<p style="color: red">**Read the instructions below very carefully.**</pre> 
+
+You can use this document as a
 checklist, if you'd like. Here's how: 
 
 1. After you've forked the repository, open your version of `README.md` in a
