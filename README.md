@@ -1,12 +1,13 @@
 # Assignment 1: Practice Scala
+###### _Submission deadline: Monday, Sept. 15 at 11:59pm_
+###### _Critique deadline: Wednesday, Sept. 17 at noon_
+
 The assignment is a modified version of the
 [Scala Labs](http://scala-labs.github.io/) project.<sup>1</sup> The goal of this
 assignment is to help you become familiar with Scala and the development tools
 we'll be using this semester. When you're done, you should feel good about:
 
-- the basics of scala: variables, TODO
-- the GitHub workflow for our assignments
-
+- the basics of scala: variables, data structures, functions, classes, tests
 
 *<sup>1</sup> Normally, it would be good practice to fork the 
 [Scala Labs repository](https://github.com/scala-labs/scala-labs/), then modify
@@ -16,7 +17,8 @@ included all the parts in our repository, in case you want to do more than is
 required.*
 
 ## Instructions
-**Read the WHOLE document (and the linked pages) very carefully.**
+**Read the WHOLE document (and the linked pages) very carefully, before you
+start coding.**
 
 Here's what to do:
 
@@ -35,6 +37,9 @@ Here's what to do:
      - [ ] Basic lab 3, `PatternMatchingExercise`
      - [ ] Basic lab 3, `RecursionPatternMatchingExercise`
      - [ ] Basic lab 3, `OptionExercise`
+  - [ ] Review the solutions included with the lab
+  - [ ] Review Ben's solutions (some of which are different)
+  - [ ] Write about Scala in `scala-thoughts.md`
 
 - Submit the assignment 
   - [ ] Submit your work.
@@ -101,30 +106,32 @@ Hints and tips:
   - Many of the solutions to these tasks have the same structure.
   - Find a built-in method that does most of the work.
 
-## Tips and Tricks
-You can use this document as a
-checklist, if you'd like. Here's how: 
+### Write about Scala
+Take about 20 minutes to collect and write about your initial impressions of
+Scala. Some possible topics include: 
 
-1. After you've forked the repository, open your version of `README.md` in a
-text editor.
-2. When you see a list that looks like this:
+  - What's easy to do in Scala? What's not?
+  - What is/are your favorite language design choice(s) that the designers of Scala 
+  made? Why?
+  - What is/are your least favorite language design choice(s)? Why? And why do
+  you think the designers made that / those choice(s)?
+  - What Scala features would you like to learn more about?
 
-```
-- [ ] A task
-- [ ] Another task
-```
+## Peer-review other teams' work
+Comment on at least two other teams' work. You should look through their
+solutions to each of the exercises, as well as their `scala-thoughts.md` file.
+You don't need to comment on everything, but find some interesting parts of
+their work to evaluate. Some questions you might consider / answer when 
+providing feedback:
 
-you can check off the things you've done:
-
-```
-- [X] A task
-- [ ] Another task
-```
-
-The list will then show up on the front page of your GitHub repository like this
-:
-
-- [X] A task
-- [ ] Another task
-
-
+  - How does this team's solution compare to yours? To the provided solutions?
+  To other people's solutions? Is there anything they did that you like better?
+  Is there any way to improve their solution?
+  - How readable is their code? How elegant is their solution? If you think it's
+  inelegant, was that because the team was trying to show an alternative
+  solution?
+  - How Scala-y is the code? Most of us are just learning the language, and we
+  can help each other spot cases when a functional approach would have worked in
+  place of an imperative one, etc.
+  - If a team has raised a question in the comments of their code, or in their
+  writings about Scala, try to answer it!
