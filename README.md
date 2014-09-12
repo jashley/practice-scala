@@ -26,14 +26,12 @@ Here's what to do:
   - [ ] Make your team on GitHub.
      1. Go to the [team sign-up page](https://github.com/hmc-cs111-fall2014/practice-scala/wiki/Team-sign-ups)
      2. Add your and your partner's names to the table. Erase your names from below the table.
-     3. Click on your team's name in the table, to take you to your team's page.
-     4. Invite both members' GitHub IDs to the team
   - [ ] Get your team's copy of the assignment.
      1. *One* of the partners should fork this assignment. This will be the fork to which you both contribute and the fork from which you issue the pull request. (But, of course, you may each have your own clones.)
      2. The partner who forked should make sure that the other partner has access to the fork. 
         1. On the fork's page, click  Settings (on the right-hand side).
         2. Click on Collaborators (on the left-hand side).
-        3. Select your team from the drop-down menu, to give your team access to the fork.
+        3. Add your partner's GitHub ID as a collaborator.
      3. Both partners should be able to push to and pull from the fork.
 
 - Work on the assignment
