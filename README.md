@@ -55,6 +55,9 @@ Here's what to do:
 
 ## Lab instructions, hints, and tips
 
+### Loading project into ScalaIDE
+If you want use ScalaIDE to work on your project, **run `sbt eclipse` in the `labs` subdirectory**, then import the project, as usual.
+
 ### Basic Lab 1
 
 The following readings could be helpful for this lab:
