@@ -50,7 +50,7 @@ Here's what to do:
   - [ ] Write about Scala in `scala-thoughts.md`
 
 - Submit the assignment 
-  - [ ] Submit your work.
+  - [ ] Submit your work (by issuing a pull request).
   - [ ] Review and comment on other teams' code. 
 
 ## Lab instructions, hints, and tips
