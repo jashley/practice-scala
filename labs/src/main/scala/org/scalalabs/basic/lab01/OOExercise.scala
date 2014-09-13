@@ -2,6 +2,8 @@ package org.scalalabs.basic.lab01
 import scala.language.implicitConversions
 /**
  * The goal of this exercise is to get familiar basic OO constructs in scala
+
+
  *
  * Fix the code so that the unit test 'CurrencyExerciseTest' passes.
  *
@@ -40,6 +42,56 @@ import scala.language.implicitConversions
  *   of type [[org.scalalabs.basic.lab01.CurrencyConverter]]
  * - Use the implicit CurrencyConverter to do the conversion. 
  */
-class Euro {
 
+abstract class Currency(var symbol:String) {}
+
+class Euro(var euro:Int=0, var cents:Int=0) extends Currency("EUR") with Ordered[Euro] {
+  
+  def inCents: Int = 100*euro + cents
+  
+  def +(other: Euro): Euro = {
+    val badCents = this.cents+other.cents
+    val newCents = badCents%100
+    val newEuro = badCents/100+this.euro+other.euro
+    new Euro(newEuro, newCents)
+  }
+  
+  def *(multiplicand: Int): Euro = {
+     new Euro(this.euro*multiplicand) + Euro.fromCents(this.cents*multiplicand)
+  }
+  
+  // We didn't realize we didn't need all of these...
+  override def >(other: Euro): Boolean = {
+    if (this.euro > other.euro) true
+    else if (other.euro > this.euro) false
+    else this.cents > other.cents
+  }
+  
+  def ==(other: Euro): Boolean = {
+    !(this>other || other>this)
+  }
+  
+  override def <(other: Euro): Boolean = {
+    !(this>other || this==other)
+  }
+  
+  override def compare(other: Euro): Int = {
+    if (this>other) 1
+    else if (other>this) -1
+    else 0
+  }
+  
+  override def toString = {
+    if (this.cents == 0) {
+      this.symbol + ": " + this.euro + ",--"
+    } else if (this.cents<10) {
+      this.symbol + ": " + this.euro + "," + "0" + this.cents
+    } else {
+      this.symbol + ": " + this.euro + "," + this.cents
+    }
+  }
+}
+
+object Euro {
+  def fromCents(c:Int) = new Euro(c/100,c%100)
 }
