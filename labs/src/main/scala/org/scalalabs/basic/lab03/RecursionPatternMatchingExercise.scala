@@ -29,7 +29,9 @@ object RecursionPatternMatchingExercise {
    * checkValuesIncrease(Seq(1,2,2)) == false
    */
   def checkValuesIncrease(seq: Seq[Int]): Boolean = {
-    error("fix me")
+    if (seq.length < 2) true
+    else if (seq(0) < seq(1)) checkValuesIncrease(seq.tail)
+    else false
   }
   
   /**

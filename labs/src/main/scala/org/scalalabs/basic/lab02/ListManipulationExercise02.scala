@@ -46,34 +46,9 @@ object ListManipulationExercise02 {
    * may be able to achieve the same functionality as implemented below
    * in a one-liner.
    */
-  def separateTheYoungFromTheOld(persons: List[Person]): List[List[String]] = {
-    
+  def separateTheYoungFromTheOld(persons: List[Person]): List[List[String]] = { 
     var sePersons = persons.sortBy(_.age).partition((person: Person) => person.age < 18)
     List(sePersons._1.map((x: Person) => x.firstName), sePersons._2.map((x: Person) => x.firstName))
-    
-//    var youngins: ListBuffer[Person] = new ListBuffer[Person]()
-//    var elders: ListBuffer[Person] = new ListBuffer[Person]()
-//    var validYoungNames: ListBuffer[String] = new ListBuffer[String]()
-//    var validOldNames: ListBuffer[String] = new ListBuffer[String]()
-//
-//    for (person <- persons) {
-//        if (person.age < 18) {
-//          youngins += person
-//        } else {
-//          elders += person
-//        }
-//    }
-//
-//    var sortedYoung = youngins.toList.sortBy(_.age)
-//    var sortedOld = elders.toList.sortBy(_.age)
-//
-//    for (young <- sortedYoung) {
-//      validYoungNames += young.firstName
-//    }
-//    for (old <- sortedOld) {
-//      validOldNames += old.firstName
-//    }
-//    List(validYoungNames.toList, validOldNames.toList)
   }
 
 }
