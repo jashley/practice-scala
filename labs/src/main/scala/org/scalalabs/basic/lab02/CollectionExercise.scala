@@ -32,8 +32,44 @@ object CollectionExercise01 {
    * Case 3: so it is okay if you want to just give up
    *
    */
+  
+  // We could not find a pattern to the decoding, so we did it the dumb way...
+  def charConvert(codeChar: Char): Char = codeChar match {
+    case 'a' => 'y'
+    case 'b' => 'h'
+    case 'c' => 'e'
+    case 'd' => 's'
+    case 'e' => 'o'
+    case 'f' => 'c'
+    case 'g' => 'v'
+    case 'h' => 'x'
+    case 'i' => 'd'
+    case 'j' => 'u'
+    case 'k' => 'i'
+    case 'l' => 'g'
+    case 'm' => 'l'
+    case 'n' => 'b'
+    case 'o' => 'k'
+    case 'p' => 'r'
+    case 'q' => 'z'
+    case 'r' => 't'
+    case 's' => 'n'
+    case 't' => 'w'
+    case 'u' => 'j'
+    case 'v' => 'p'
+    case 'w' => 'f'
+    case 'x' => 'm'
+    case 'y' => 'a'
+    case 'z' => 'q'
+    case _ => ' '
+  }
+  
+  def deEncode(code: String): String = {
+    code.toList.map(charConvert).mkString
+  }
+  
   def googleCodeJamGooglerese(lines: String*): Seq[String] = {
-    error("fix me")
+    lines.map(deEncode)
   }
 }
 /*========================================================== */
@@ -49,8 +85,19 @@ object CollectionExercise02 {
    * Rewrite the method groupAdultsPerAgeGroup in the ImperativeSample java class
    * using a functional approach.
    */
+  
   def groupAdultsPerAgeGroup(persons: Seq[Person]): Map[Int, Seq[Person]] = {
-    error("fix me")
+    val adults = persons.filter((p: Person) => p.age >= 18)
+    
+    val nameSorted = adults.sortWith((p1: Person, p2: Person) => p1.name < p2.name)
+    
+    def addToMap(acc: Map[Int, Seq[Person]], p: Person): Map[Int, Seq[Person]] = {
+      val key = p.age/10 * 10
+      val oldValue = acc.getOrElse(key, Seq[Person]())
+      val newValue = oldValue ++ Seq(p)
+      acc.updated(key, newValue)
+    } 
+    nameSorted.foldLeft(Map[Int, Seq[Person]]())(addToMap)
   }
 }
 
@@ -65,8 +112,7 @@ object CollectionExercise03 {
    * checkValuesIncrease(Seq(1,2,2)) == false
    */
   def checkValuesIncrease[T <% Ordered[T]](seq: Seq[T]): Boolean =
-    error("fix me")
-
+    seq.distinct.sorted == seq
 }
 /*========================================================== */
 
@@ -76,6 +122,17 @@ object CollectionExercise04 {
    * To keep it simple it's ok to use String.split to extract all words of a sentence.
    */
   def calcLengthLongestWord(lines: String*): Int = {
-    error("fix me")
+    def longestWord(line: String): String = {
+      
+      def lengthSort(w1: String, w2: String): Boolean = {
+        if (w1.length() < w2.length()) true
+        else false
+      }
+      
+      val words = line.split(" ").map((s: String) => s.replaceAll("[^a-zA-Z]",""))
+      words.sortWith(lengthSort).last
+    }
+    
+    lines.map(longestWord).sorted.last.length()
   }
 }

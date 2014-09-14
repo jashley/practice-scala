@@ -11,7 +11,7 @@ object ListManipulationExercise02 {
    * As usual, various ways exist: pattern matching, folding, ...
    */
   def maxElementInList(l: List[Int]): Int = {
-    error("fix me")
+    l.foldLeft(Int.MinValue)((x: Int, y: Int) => if (x>=y) x else y)
   }
 
   /**
@@ -19,7 +19,15 @@ object ListManipulationExercise02 {
    * of the two list
    */
   def sumOfTwo(l1: List[Int], l2: List[Int]): List[Int] = {
-    error("fix me")
+    var l1padded = l1
+    var l2padded = l2
+    if (l1.length < l2.length) {
+      l1padded = l1.padTo(l2.length, 0)
+    } else {
+      l2padded = l2.padTo(l1.length, 0)
+    }
+    
+    l1padded.zip(l2padded).map((t: (Int, Int)) => t._1+t._2) 
   }
 
   /**
@@ -27,7 +35,7 @@ object ListManipulationExercise02 {
    * method above
    */
   def sumOfMany(l: List[Int]*): List[Int] = {
-    error("fix me")
+    l.foldLeft(List[Int]())((x:List[Int], y:List[Int]) => sumOfTwo(x, y))
   }
 
   case class Person(age: Int, firstName: String, lastName: String)
@@ -38,30 +46,9 @@ object ListManipulationExercise02 {
    * may be able to achieve the same functionality as implemented below
    * in a one-liner.
    */
-  def separateTheYoungFromTheOld(persons: List[Person]): List[List[String]] = {
-    var youngins: ListBuffer[Person] = new ListBuffer[Person]()
-    var elders: ListBuffer[Person] = new ListBuffer[Person]()
-    var validYoungNames: ListBuffer[String] = new ListBuffer[String]()
-    var validOldNames: ListBuffer[String] = new ListBuffer[String]()
-
-    for (person <- persons) {
-        if (person.age < 18) {
-          youngins += person
-        } else {
-          elders += person
-        }
-    }
-
-    var sortedYoung = youngins.toList.sortBy(_.age)
-    var sortedOld = elders.toList.sortBy(_.age)
-
-    for (young <- sortedYoung) {
-      validYoungNames += young.firstName
-    }
-    for (old <- sortedOld) {
-      validOldNames += old.firstName
-    }
-    List(validYoungNames.toList, validOldNames.toList)
+  def separateTheYoungFromTheOld(persons: List[Person]): List[List[String]] = { 
+    var sePersons = persons.sortBy(_.age).partition((person: Person) => person.age < 18)
+    List(sePersons._1.map((x: Person) => x.firstName), sePersons._2.map((x: Person) => x.firstName))
   }
 
 }
